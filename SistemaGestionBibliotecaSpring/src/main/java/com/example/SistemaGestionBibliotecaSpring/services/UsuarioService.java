@@ -2,7 +2,7 @@ package com.example.SistemaGestionBibliotecaSpring.services;
 
 import com.example.SistemaGestionBibliotecaSpring.models.Usuario;
 
-import java.util.List;
+import java.util.*;
 
 public interface UsuarioService {
     Usuario save(Usuario usuario);
