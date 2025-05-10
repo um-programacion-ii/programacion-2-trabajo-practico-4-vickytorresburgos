@@ -45,14 +45,14 @@ public class PrestamoController {
     }
 
     @PostMapping("/por-libro")
-    public ResponseEntity<Prestamo> obtenerPrestamoPorLibro(@RequestBody Libro libro) {
+    public ResponseEntity<Prestamo> findByLibro(@RequestBody Libro libro) {
         return prestamoService.findByLibro(libro)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
     }
 
     @PostMapping("/por-usuario")
-    public ResponseEntity<Prestamo> obtenerPrestamoPorUsuario(@RequestBody Usuario usuario) {
+    public ResponseEntity<Prestamo> findByUsuario(@RequestBody Usuario usuario) {
         return prestamoService.findByUsuario(usuario)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
