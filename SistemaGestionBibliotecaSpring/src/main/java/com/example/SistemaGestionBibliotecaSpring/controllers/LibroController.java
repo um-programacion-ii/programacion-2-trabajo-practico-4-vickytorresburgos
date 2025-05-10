@@ -18,7 +18,7 @@ public class LibroController {
         this.libroService = libroService;
     }
 
-    @GetMapping
+    @GetMapping("/{isbn}")
     public ResponseEntity<Libro> findByISBN(@PathVariable String isbn) {
         try{
             Libro libro = libroService.findByISBN(isbn);
